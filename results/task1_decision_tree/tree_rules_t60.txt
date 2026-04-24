@@ -1,0 +1,91 @@
+|--- bio_Fasting GLU - PDL (Lab) <= -0.10
+|   |--- cgm_at_meal <= -0.34
+|   |   |--- cgm_pre_max <= -1.29
+|   |   |   |--- carbs <= 0.34
+|   |   |   |   |--- cgm_at_meal <= -1.84
+|   |   |   |   |   |--- value: [42.11]
+|   |   |   |   |--- cgm_at_meal >  -1.84
+|   |   |   |   |   |--- value: [50.81]
+|   |   |   |--- carbs >  0.34
+|   |   |   |   |--- hour_cos <= -0.66
+|   |   |   |   |   |--- value: [79.01]
+|   |   |   |   |--- hour_cos >  -0.66
+|   |   |   |   |   |--- value: [64.76]
+|   |   |--- cgm_pre_max >  -1.29
+|   |   |   |--- bio_BMI <= -0.18
+|   |   |   |   |--- cgm_at_meal <= -1.02
+|   |   |   |   |   |--- value: [74.81]
+|   |   |   |   |--- cgm_at_meal >  -1.02
+|   |   |   |   |   |--- value: [89.58]
+|   |   |   |--- bio_BMI >  -0.18
+|   |   |   |   |--- bio_Fasting GLU - PDL (Lab) <= -0.30
+|   |   |   |   |   |--- value: [102.25]
+|   |   |   |   |--- bio_Fasting GLU - PDL (Lab) >  -0.30
+|   |   |   |   |   |--- value: [73.87]
+|   |--- cgm_at_meal >  -0.34
+|   |   |--- bio_A1c PDL (Lab) <= 0.04
+|   |   |   |--- carbs <= -0.04
+|   |   |   |   |--- cgm_at_meal <= 0.87
+|   |   |   |   |   |--- value: [102.05]
+|   |   |   |   |--- cgm_at_meal >  0.87
+|   |   |   |   |   |--- value: [123.75]
+|   |   |   |--- carbs >  -0.04
+|   |   |   |   |--- cgm_pre_std <= -0.41
+|   |   |   |   |   |--- value: [125.82]
+|   |   |   |   |--- cgm_pre_std >  -0.41
+|   |   |   |   |   |--- value: [110.91]
+|   |   |--- bio_A1c PDL (Lab) >  0.04
+|   |   |   |--- hour_sin <= 0.45
+|   |   |   |   |--- carbs <= -0.29
+|   |   |   |   |   |--- value: [111.92]
+|   |   |   |   |--- carbs >  -0.29
+|   |   |   |   |   |--- value: [136.91]
+|   |   |   |--- hour_sin >  0.45
+|   |   |   |   |--- cgm_at_meal <= 0.50
+|   |   |   |   |   |--- value: [190.88]
+|   |   |   |   |--- cgm_at_meal >  0.50
+|   |   |   |   |   |--- value: [155.88]
+|--- bio_Fasting GLU - PDL (Lab) >  -0.10
+|   |--- cgm_at_meal <= 0.74
+|   |   |--- cgm_slope_15 <= -0.34
+|   |   |   |--- cgm_at_meal <= 0.28
+|   |   |   |   |--- cgm_slope_30 <= -0.98
+|   |   |   |   |   |--- value: [98.06]
+|   |   |   |   |--- cgm_slope_30 >  -0.98
+|   |   |   |   |   |--- value: [121.78]
+|   |   |   |--- cgm_at_meal >  0.28
+|   |   |   |   |--- carbs <= -0.29
+|   |   |   |   |   |--- value: [121.43]
+|   |   |   |   |--- carbs >  -0.29
+|   |   |   |   |   |--- value: [144.98]
+|   |   |--- cgm_slope_15 >  -0.34
+|   |   |   |--- bio_A1c PDL (Lab) <= 0.57
+|   |   |   |   |--- carbs <= 0.05
+|   |   |   |   |   |--- value: [143.27]
+|   |   |   |   |--- carbs >  0.05
+|   |   |   |   |   |--- value: [163.13]
+|   |   |   |--- bio_A1c PDL (Lab) >  0.57
+|   |   |   |   |--- bio_A1c PDL (Lab) <= 2.25
+|   |   |   |   |   |--- value: [128.14]
+|   |   |   |   |--- bio_A1c PDL (Lab) >  2.25
+|   |   |   |   |   |--- value: [169.57]
+|   |--- cgm_at_meal >  0.74
+|   |   |--- hour_sin <= 0.82
+|   |   |   |--- bio_Fasting GLU - PDL (Lab) <= 3.23
+|   |   |   |   |--- cgm_slope_15 <= 0.40
+|   |   |   |   |   |--- value: [145.50]
+|   |   |   |   |--- cgm_slope_15 >  0.40
+|   |   |   |   |   |--- value: [183.25]
+|   |   |   |--- bio_Fasting GLU - PDL (Lab) >  3.23
+|   |   |   |   |--- value: [205.96]
+|   |   |--- hour_sin >  0.82
+|   |   |   |--- bio_Age <= 0.14
+|   |   |   |   |--- cgm_at_meal <= 1.70
+|   |   |   |   |   |--- value: [240.54]
+|   |   |   |   |--- cgm_at_meal >  1.70
+|   |   |   |   |   |--- value: [302.33]
+|   |   |   |--- bio_Age >  0.14
+|   |   |   |   |--- cgm_pre_mean <= 1.05
+|   |   |   |   |   |--- value: [178.08]
+|   |   |   |   |--- cgm_pre_mean >  1.05
+|   |   |   |   |   |--- value: [236.49]

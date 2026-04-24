@@ -1,0 +1,4 @@
+model,task,horizon,rmse_mean,rmse_std,mae_mean,mae_std,r2_mean,r2_std,n_features,n_estimators,max_depth,clinical_ok
+RandomForest,regression,t+30 min,19.31,2.59,14.83,1.6,0.715,0.07,24,200,8,False
+RandomForest,regression,t+60 min,30.54,4.75,23.22,3.32,0.512,0.139,24,200,8,False
+RandomForest,regression,t+90 min,31.11,5.41,23.26,3.76,0.518,0.104,24,200,8,False

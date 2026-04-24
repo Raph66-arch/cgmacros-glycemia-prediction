@@ -1,0 +1,4 @@
+model,task,horizon,accuracy_mean,accuracy_std,recall_mean,recall_std,f1_mean,f1_std,n_features,class_weight
+RandomForest,classification,t+30 min,0.882,0.028,0.843,0.029,0.829,0.047,24,balanced
+RandomForest,classification,t+60 min,0.817,0.057,0.791,0.062,0.781,0.057,24,balanced
+RandomForest,classification,t+90 min,0.822,0.058,0.795,0.067,0.781,0.067,24,balanced

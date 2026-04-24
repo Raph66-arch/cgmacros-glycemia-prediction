@@ -1,0 +1,4 @@
+model,task,horizon,accuracy_mean,accuracy_std,recall_mean,recall_std,f1_mean,f1_std,n_features,class_weight
+LogisticRegression,classification,t+30 min,0.874,0.033,0.871,0.036,0.828,0.036,24,balanced
+LogisticRegression,classification,t+60 min,0.789,0.061,0.778,0.049,0.752,0.053,24,balanced
+LogisticRegression,classification,t+90 min,0.784,0.064,0.767,0.033,0.739,0.052,24,balanced

@@ -1,0 +1,4 @@
+model,task,horizon,rmse_mean,rmse_std,mae_mean,mae_std,r2_mean,r2_std,n_features,max_depth,clinical_ok
+DecisionTree,regression,t+30 min,20.9,0.84,15.86,0.97,0.667,0.107,24,5,False
+DecisionTree,regression,t+60 min,36.3,2.16,27.0,1.63,0.322,0.277,24,5,False
+DecisionTree,regression,t+90 min,36.58,4.85,26.56,3.23,0.373,0.161,24,5,False

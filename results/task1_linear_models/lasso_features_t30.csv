@@ -1,0 +1,25 @@
+feature,coef_lasso,selected
+cgm_at_meal,78.5541773093332,True
+hour_sin,4.090502859082933,True
+meal_lunch,-1.296778500869039,True
+meal_breakfast,0.15466549626898227,True
+bio_gender_encoded,-2.2074947584686915,True
+bio_Age,-0.5619721187147506,True
+bio_BMI,-4.001773344130947,True
+bio_Insulin,5.667934630125944,True
+bio_Fasting GLU - PDL (Lab),-2.763065756660739,True
+bio_A1c PDL (Lab),6.469131597140793,True
+cgm_pre_mean,-70.13473086823329,True
+hour_cos,-0.39890794016105297,True
+fiber,0.5251358022200577,True
+fat,-0.5450466205488913,True
+protein,-2.0256369749925787,True
+carbs,2.959025630141803,True
+cgm_slope_30,-27.991537184770607,True
+cgm_slope_15,17.293154775394367,True
+cgm_pre_max,14.469178369780655,True
+cgm_pre_min,6.374500883855431,True
+cgm_pre_std,-4.781745236047449,True
+meal_snacks,-0.5027975536801524,True
+bio_group_encoded,0.0,False
+meal_dinner,0.0,False
