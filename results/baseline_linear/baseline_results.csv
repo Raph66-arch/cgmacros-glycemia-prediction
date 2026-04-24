@@ -1,0 +1,4 @@
+model,task,horizon,rmse_mean,rmse_std,mae_mean,mae_std,r2_mean,r2_std,n_features,alpha,clinical_ok
+Ridge,regression,t+30 min,15.27,0.67,12.03,0.81,0.822,0.056,24,1.0,False
+Ridge,regression,t+60 min,31.21,1.8,24.06,1.69,0.507,0.18,24,1.0,False
+Ridge,regression,t+90 min,33.46,1.86,25.48,1.41,0.472,0.137,24,1.0,False
