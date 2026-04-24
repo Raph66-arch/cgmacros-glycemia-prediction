@@ -77,5 +77,3 @@ python src/meal_window_builder.py
 - **Do not share or redistribute** the dataset — this is a strict condition of the PhysioNet Data Use Agreement.
 - **Do not commit data files** to this repository. The `.gitignore` is configured to exclude `data/raw/` and `data/processed/*.csv`. Verify with `git status` before every push.
 - Any publication or public use derived from this dataset must cite the original source:
-
-> Bent, B., Henriquez, C., & Dunn, J. (2021). *CGMacros* (version 1.0.0). PhysioNet. [https://doi.org/10.13026/ceh6-4x45](https://doi.org/10.13026/ceh6-4x45)
