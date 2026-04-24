@@ -14,7 +14,7 @@
 This project addresses postprandial glycemia prediction through two complementary tasks:
 
 - **Task 1 — Regression**: predict the exact blood glucose value (mg/dL) at t+30, t+60, and t+90 minutes after meal onset
-- **Task 2 — Classification**: predict the glycemic risk category (hypoglycemia / euglycemia / hyperglycemia)
+- **Task 2 — Classification**: predict the glycemic risk category (euglycemia / hyperglycemia)
 
 Models span from a linear regression baseline to decision trees and random forests, all evaluated via GroupKFold cross-validation on a real-world clinical dataset of 44 participants with diverse metabolic profiles.
 
@@ -88,12 +88,12 @@ cgmacros-glycemia-prediction/
 ├── .gitignore
 │
 ├── data/
-│   └── README.md                          ← PhysioNet + CITI access instructions
+│   └── README.md                                   ← PhysioNet + CITI access instructions
 │
 ├── src/
 │   ├── config.py
-│   ├── build_patient_table.py             ← builds patient-level feature table
-│   ├── meal_window_builder.py             ← extracts ~1,700 meal windows
+│   ├── build_patient_table.py
+│   ├── meal_window_builder.py
 │   ├── column_description_meal_window.py
 │   ├── baseline_linear_regression.py
 │   ├── task1_linear_models.py
@@ -105,18 +105,132 @@ cgmacros-glycemia-prediction/
 │   └── compare_task2_classification.py
 │
 ├── notebooks/
-│   └── EDA_CGMacros.ipynb                 ← exploratory data analysis
+│   └── EDA_CGMacros.ipynb
 │
 ├── results/
-│   └── figures/
-│       ├── compare_rmse.png
-│       ├── radar_t60.png
-│       ├── heatmap_f1.png
-│       └── scatter_configA_t60.png
+│   │
+│   ├── baseline_linear/                            ← baseline_linear_regression.py
+│   │   ├── baseline_results.csv
+│   │   ├── coefficients_t30.png
+│   │   ├── coefficients_t60.png
+│   │   ├── coefficients_t90.png
+│   │   ├── scatter_t30.png
+│   │   ├── scatter_t60.png
+│   │   └── scatter_t90.png
+│   │
+│   ├── task1_linear_models/                        ← task1_linear_models.py
+│   │   ├── results_linear_models.csv
+│   │   ├── coef_table_t30.csv
+│   │   ├── coef_table_t60.csv
+│   │   ├── coef_table_t90.csv
+│   │   ├── lasso_features_t30.csv
+│   │   ├── lasso_features_t60.csv
+│   │   ├── lasso_features_t90.csv
+│   │   ├── coefficients_comparison_t30.png
+│   │   ├── coefficients_comparison_t60.png
+│   │   ├── coefficients_comparison_t90.png
+│   │   ├── importance_LassoRF_t30.png
+│   │   ├── importance_LassoRF_t60.png
+│   │   ├── importance_LassoRF_t90.png
+│   │   ├── lasso_alpha_t30.png
+│   │   ├── lasso_alpha_t60.png
+│   │   ├── lasso_alpha_t90.png
+│   │   ├── residuals_OLS_t30.png
+│   │   ├── residuals_OLS_t60.png
+│   │   ├── residuals_OLS_t90.png
+│   │   ├── scatter_Lasso_t30.png
+│   │   ├── scatter_Lasso_t60.png
+│   │   ├── scatter_Lasso_t90.png
+│   │   ├── scatter_LassoRF_t30.png
+│   │   ├── scatter_LassoRF_t60.png
+│   │   ├── scatter_LassoRF_t90.png
+│   │   ├── scatter_OLS_t30.png
+│   │   ├── scatter_OLS_t60.png
+│   │   ├── scatter_OLS_t90.png
+│   │   ├── scatter_Ridge_t30.png
+│   │   ├── scatter_Ridge_t60.png
+│   │   └── scatter_Ridge_t90.png
+│   │
+│   ├── task1_decision_tree/                        ← task1_decision_tree.py
+│   │   ├── results_decision_tree_regression.csv
+│   │   ├── importance_t30.png
+│   │   ├── importance_t60.png
+│   │   ├── importance_t90.png
+│   │   ├── scatter_t30.png
+│   │   ├── scatter_t60.png
+│   │   ├── scatter_t90.png
+│   │   ├── tree_rules_t60.txt
+│   │   └── tree_structure_t60.png
+│   │
+│   ├── task1_random_forest/                        ← task1_random_forest.py
+│   │   ├── results_random_forest_regression.csv
+│   │   ├── gridsearch_best_params_t60.csv
+│   │   ├── importance_t30.png
+│   │   ├── importance_t60.png
+│   │   ├── importance_t90.png
+│   │   ├── learning_curve_t60.png
+│   │   ├── scatter_t30.png
+│   │   ├── scatter_t60.png
+│   │   └── scatter_t90.png
+│   │
+│   ├── comparison_task1_regression/                ← compare_task1_regression.py
+│   │   ├── comparison_regression_summary.csv
+│   │   ├── compare_mae.png
+│   │   ├── compare_r2.png
+│   │   ├── compare_rmse.png
+│   │   └── radar_t60.png
+│   │
+│   ├── task2_logistic_regression/                  ← task2_logistic_regression.py
+│   │   ├── results_logistic_regression_classification.csv
+│   │   ├── classification_report_t30.csv
+│   │   ├── classification_report_t60.csv
+│   │   ├── classification_report_t90.csv
+│   │   ├── confusion_matrix_t30.png
+│   │   ├── confusion_matrix_t60.png
+│   │   ├── confusion_matrix_t90.png
+│   │   ├── metrics_by_class_t30.png
+│   │   ├── metrics_by_class_t60.png
+│   │   ├── metrics_by_class_t90.png
+│   │   ├── roc_curves_t30.png
+│   │   ├── roc_curves_t60.png
+│   │   └── roc_curves_t90.png
+│   │
+│   ├── task2_decision_tree/                        ← task2_trees_classification.py
+│   │   ├── results_decision_tree_classification.csv
+│   │   ├── confusion_t30.png
+│   │   ├── confusion_t60.png
+│   │   ├── confusion_t90.png
+│   │   ├── importance_t30.png
+│   │   ├── importance_t60.png
+│   │   ├── importance_t90.png
+│   │   ├── report_t30.csv
+│   │   ├── report_t60.csv
+│   │   ├── report_t90.csv
+│   │   └── tree_structure_t60.png
+│   │
+│   ├── task2_random_forest/                        ← task2_trees_classification.py
+│   │   ├── results_random_forest_classification.csv
+│   │   ├── confusion_t30.png
+│   │   ├── confusion_t60.png
+│   │   ├── confusion_t90.png
+│   │   ├── importance_t30.png
+│   │   ├── importance_t60.png
+│   │   ├── importance_t90.png
+│   │   ├── report_t30.csv
+│   │   ├── report_t60.csv
+│   │   └── report_t90.csv
+│   │
+│   └── comparison_task2_classification/            ← compare_task2_classification.py
+│       ├── comparison_classification_summary.csv
+│       ├── compare_accuracy.png
+│       ├── compare_f1.png
+│       ├── compare_recall.png
+│       ├── focus_recall_t60.png
+│       └── heatmap_f1.png
 │
 └── report/
     └── rapport_CGMacros.pdf
-```
+'''
 
 ---
 
