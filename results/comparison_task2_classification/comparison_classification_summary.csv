@@ -1,0 +1,10 @@
+model,task,horizon,accuracy_mean,accuracy_std,recall_mean,recall_std,f1_mean,f1_std,n_features,class_weight,model_label
+LogisticRegression,classification,t+30 min,0.879,0.024,0.874,0.032,0.835,0.04,24,balanced,LogisticRegression
+LogisticRegression,classification,t+60 min,0.799,0.051,0.8,0.061,0.773,0.048,24,balanced,LogisticRegression
+LogisticRegression,classification,t+90 min,0.794,0.054,0.79,0.057,0.759,0.055,24,balanced,LogisticRegression
+DecisionTree,classification,t+30 min,0.844,0.052,0.822,0.054,0.789,0.074,24,balanced,DecisionTree
+DecisionTree,classification,t+60 min,0.778,0.047,0.733,0.047,0.729,0.05,24,balanced,DecisionTree
+DecisionTree,classification,t+90 min,0.786,0.074,0.79,0.069,0.755,0.068,24,balanced,DecisionTree
+RandomForest,classification,t+30 min,0.882,0.028,0.843,0.029,0.829,0.047,24,balanced,RandomForest
+RandomForest,classification,t+60 min,0.817,0.057,0.791,0.062,0.781,0.057,24,balanced,RandomForest
+RandomForest,classification,t+90 min,0.822,0.058,0.795,0.067,0.781,0.067,24,balanced,RandomForest

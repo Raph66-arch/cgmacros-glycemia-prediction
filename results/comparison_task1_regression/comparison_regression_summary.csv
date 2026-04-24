@@ -1,0 +1,19 @@
+model,task,horizon,rmse_mean,rmse_std,mae_mean,mae_std,r2_mean,r2_std,n_features,alpha,clinical_ok,model_label,max_depth,n_estimators
+OLS,regression,t+30 min,15.08,0.73,11.84,0.76,0.825,0.034,24,,False,OLS,,
+OLS,regression,t+60 min,30.43,2.94,23.45,2.5,0.516,0.107,24,,False,OLS,,
+OLS,regression,t+90 min,31.89,3.15,24.17,2.51,0.487,0.098,24,,False,OLS,,
+Ridge,regression,t+30 min,15.18,0.87,11.95,0.8,0.824,0.03,24,,False,Ridge,,
+Ridge,regression,t+60 min,30.48,2.99,23.56,2.5,0.515,0.105,24,,False,Ridge,,
+Ridge,regression,t+90 min,31.92,3.18,24.25,2.51,0.486,0.099,24,,False,Ridge,,
+Lasso,regression,t+30 min,15.16,0.87,11.92,0.81,0.824,0.03,24,,False,Lasso,,
+Lasso,regression,t+60 min,30.63,3.33,23.54,2.5,0.51,0.115,24,,False,Lasso,,
+Lasso,regression,t+90 min,31.52,3.47,23.87,2.72,0.496,0.116,24,,False,Lasso,,
+Lasso -> RF,regression,t+30 min,19.03,2.73,14.65,1.61,0.725,0.062,24,,False,Lasso -> RF,,
+Lasso -> RF,regression,t+60 min,31.31,3.9,23.81,2.68,0.488,0.127,24,,False,Lasso -> RF,,
+Lasso -> RF,regression,t+90 min,31.01,5.38,23.01,3.61,0.522,0.098,24,,False,Lasso -> RF,,
+DecisionTree,regression,t+30 min,20.9,0.84,15.86,0.97,0.667,0.107,24,,False,DecisionTree,5.0,
+DecisionTree,regression,t+60 min,36.3,2.16,27.0,1.63,0.322,0.277,24,,False,DecisionTree,5.0,
+DecisionTree,regression,t+90 min,36.58,4.85,26.56,3.23,0.373,0.161,24,,False,DecisionTree,5.0,
+RandomForest,regression,t+30 min,19.36,1.41,14.71,1.3,0.722,0.07,24,,False,RandomForest,8.0,200.0
+RandomForest,regression,t+60 min,31.01,2.48,23.47,2.18,0.524,0.147,24,,False,RandomForest,8.0,200.0
+RandomForest,regression,t+90 min,31.93,2.64,23.67,1.18,0.526,0.099,24,,False,RandomForest,8.0,200.0
